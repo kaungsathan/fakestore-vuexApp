@@ -62,7 +62,6 @@ export default {
         showItem() {
             axios.get('https://fakestoreapi.com/products')
                 .then(response => {
-                    // console.log(response.data);
                     this.allProduct = response.data;
                 })
         },
@@ -70,7 +69,6 @@ export default {
         showCategories() {
             axios.get('https://fakestoreapi.com/products/categories')
                 .then(response => {
-                    // console.log(response.data);
                     this.categories = response.data;
                 })
         },
@@ -79,7 +77,6 @@ export default {
             let categoryName = name;
             axios.get('https://fakestoreapi.com/products/category/' + categoryName)
                 .then(response => {
-                    // console.log(response.data);
                     this.allProduct = response.data;
                 })
         }

@@ -1,24 +1,4 @@
 <template>
-  <!-- <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/shop">Shop</router-link> |
-
-    <router-link to="/cart" class="position-relative p-1">
-      Cart
-      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill"
-        v-if="this.$store.state.cart == 0">
-        <span class="visually-hidden">unread messages</span>
-      </span>
-
-      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark"
-        v-if="this.$store.state.cart != 0">
-        {{ this.$store.state.cart }}
-        <span class="visually-hidden">unread messages</span>
-      </span>
-    </router-link>
-  </nav> -->
-
   <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
       <router-link to="/" class="navbar-brand">Fake Store</router-link>

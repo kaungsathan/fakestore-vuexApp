@@ -1,6 +1,5 @@
 <template>
     <div class="cart container">
-        <!-- <h1>Cart</h1> -->
 
         <div v-if="productStr == null">
             <h1>Empty Cart !</h1>
@@ -80,7 +79,6 @@ export default {
             (this.productArr[index].qty)++;
 
             this.productArr[index].cost = ((this.productArr[index].price) * (this.productArr[index].qty)).toFixed(2);
-            // console.log(this.productArr);
 
             localStorage.setItem('cart', JSON.stringify(this.productArr));
             this.showTable();

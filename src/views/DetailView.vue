@@ -17,7 +17,6 @@
 
                         <h5 class="card-text mb-4">Rating - {{ productRate }}</h5>
                         <h5 class="card-text mb-4">Price - {{ productDetail.price }} $</h5>
-                        <!-- <p class="card-text mb-4"><small class="text-muted">Last updated 3 mins ago</small></p> -->
 
                         <div class="input-group mb-4 w-25">
                             <button class="input-group-text btn btn-dark" id="basic-addon1"
@@ -59,7 +58,6 @@ export default {
 
             axios.get('https://fakestoreapi.com/products/' + id)
                 .then(response => {
-                    // console.log(response.data);
                     this.productDetail = response.data;
                     this.productRate = response.data.rating.rate;
 
@@ -72,7 +70,6 @@ export default {
             qty++;
             this.productDetail.qty = qty;
             this.productDetail.cost = ((this.productDetail.price) * (this.productDetail.qty)).toFixed(2);
-            // console.log(this.productDetail.qty);
         },
 
         sub(qty) {
@@ -80,7 +77,6 @@ export default {
                 qty--;
                 this.productDetail.qty = qty;
                 this.productDetail.cost = ((this.productDetail.price) * (this.productDetail.qty)).toFixed(2);
-                // console.log(this.productDetail.qty);
             }
         },
 
