@@ -98,10 +98,10 @@ export default {
             }
             if (this.status) {
                 productArr.push(this.productDetail);
+                this.$store.state.cart++;
             }
 
             localStorage.setItem('cart', JSON.stringify(productArr));
-            this.$store.state.cart++;
         }
     },
 }
